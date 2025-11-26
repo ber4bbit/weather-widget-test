@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    // Target и module - современные версии, Babel будет транспилировать дальше
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+
+    // Поддержка Vue
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+
+    // Strict mode для надёжности
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+
+    // Interop с CommonJS модулями
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // Разрешение путей
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    // Типы
+    "types": ["node", "webpack"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+
+    // Source maps для отладки
+    "sourceMap": true,
+
+    // Output (хотя Webpack всё равно перезапишет)
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "include": [
+    "src/**/*",
+    "webpack.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
