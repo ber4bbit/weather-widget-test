@@ -108,7 +108,9 @@ const isOpenedSettings = ref<boolean>(false);
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-height: 550px;
+    max-height: 800px;
+	margin: unset;
+	padding: 32px;
     overflow-y: scroll;
 }
 
@@ -130,8 +132,8 @@ const isOpenedSettings = ref<boolean>(false);
         gap: 3rem;
 
         svg {
-            width: 64px;
-            height: 64px;
+            width: 128px;
+            height: 128px;
         }
 
         span {
