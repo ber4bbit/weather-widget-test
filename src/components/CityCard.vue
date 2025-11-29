@@ -38,6 +38,7 @@ onBeforeMount(() => {
 			<WeatherIcon :weather="weatherState" />
             <span>{{Math.round(expandedCity.main.temp)}}°C</span>
         </div>
+        <p>Feels like {{Math.round(expandedCity.main.feels_like)}}°C.</p>
     </div>
 </template>
 
