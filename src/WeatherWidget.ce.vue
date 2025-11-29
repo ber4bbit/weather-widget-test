@@ -31,13 +31,65 @@ const isOpenedSettings = ref<boolean>(false);
     justify-content: space-between;
     height: 200px;
 
+    &__item {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+        border-radius: 9px;
+        padding: 6px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        button {
+            border: none;
+            outline: none;
+            background-color: unset;
+            color: black;
+            transition: color .2s;
+
+            svg {
+                width: 18px;
+                height: 18px;
+
+                path {
+                    stroke: currentColor;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    &__list {
+        padding: unset;
+        margin: unset;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
     &__title {
-        margin: 0;
+        margin: 0 0 12px;
     }
 
     &__add {
         display: flex;
         flex-direction: column;
+        margin-top: 24px;
     }
 
     &__btn {
